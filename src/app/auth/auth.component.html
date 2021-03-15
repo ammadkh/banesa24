@@ -1,0 +1,80 @@
+        <!--Add Listing starts-->
+        <div class="list-details-section section-padding add_list pt-50">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-md-7">
+                <div class="user-login-section">
+
+                  <div class="col-md-12" style="padding:0px;">
+                    <ul class="ui-list nav nav-tabs mb-30" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" routerLink="." role="tab"
+                          routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" routerLink="./register" role="tab"
+                          routerLinkActive="active">Register</a>
+                      </li>
+                    </ul>
+                    <div class="login-wrapper">
+                      <div class="ui-dash tab-content">
+                        <router-outlet></router-outlet>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--User login section ends-->
+              </div>
+
+
+
+              <div class="col-md-5">
+
+                <div class="login-right-widgets">
+                  <div class="content-block">
+
+                    <h4>My Account</h4>
+
+                    <div class="create-ad">
+                      <a class="btn v1" href="submit-add-online.html">Create Ad Online </a>
+                      <p>With a user account, you can place your ad simply, quickly and cost effectively with
+                        homegate.ch.</p>
+                    </div>
+                    <!---create-ad-->
+
+                    <div class="create-ad">
+                      <a class="btn v1" href="my-ads.html">My Ads </a>
+                      <p>You can change, archive or delete your ad.</p>
+                    </div>
+                    <!---create-ad-->
+
+                    <div class="other">
+                      <h5>Other services</h5>
+                      <p>With a user account, you can also:</p>
+                      <ul>
+                        <li>create an application file</li>
+                        <li>save ads in your watch list.</li>
+                      </ul>
+
+                      <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                      </div>
+                      <!--social-->
+
+                    </div>
+                    <!---create-ad-->
+                  </div>
+                  <!--content-block-->
+                </div>
+                <!--login-right-widgets-->
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!--Add Listing ends-->

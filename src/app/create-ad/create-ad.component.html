@@ -1,0 +1,32 @@
+<!--Add Listing starts-->
+<div class="list-details-section section-padding add_list pt-50">
+  <div class="container">
+      <div class="row">
+
+<div class="col-md-12">
+<h3>Create Ad</h3>
+</div>
+
+          <div class="col-md-12">
+              <ul class="nav nav-tabs list-details-tab">
+
+                  <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                      <a routerLink=".">General</a>
+                  </li>
+
+                  <li class="nav-item " routerLinkActive="active">
+                      <a routerLink="./package">Package</a>
+                  </li>
+
+                  <li class="nav-item" routerLinkActive="active">
+                      <a routerLink="./billing">Billing</a>
+                  </li>
+
+              </ul>
+              <div class="tab-content my-30 add_list_content">
+                <router-outlet></router-outlet>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

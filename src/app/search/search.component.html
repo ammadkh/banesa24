@@ -1,0 +1,195 @@
+<!--Hero section starts-->
+<div class="hero-parallax bg-fixed" style="background-image: url(assets/images/header/header_11.jpg)">
+  <div class="overlay op-1"></div>
+  <div class="container">
+    <div class="row">
+
+
+      <div class="hero-slider-item">
+        <div class="row">
+
+          <div class="col-xl-6 col-lg-6 col-md-12">
+            <div class="hero-slider-info">
+              <form class="hero__form v3 filter listing-filter">
+                <div *ngIf="searchMode">
+                  <h4>Search real estate for {{searchMode === 'rent' ? 'rent' : 'buy'}}</h4>
+                </div>
+                <div *ngIf="!searchMode">
+                  <h4>Switzerland's largest real estate portal</h4>
+                  <div class="row">
+                    <div class="col-md-12 mb-3 radio-select-fields">
+                      <div class="radio-field">
+                        <label class="radio-container">
+                          <p>For Rent</p>
+                          <input type="radio" name="radio" checked>
+                          <span class="checkmark"></span>
+                        </label>
+
+                      </div>
+                      <div class="radio-field">
+                        <label class="radio-container">
+                          <p>To Buy</p>
+                          <input type="radio" name="radio">
+                          <span class="checkmark"></span>
+                        </label>
+
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="row">
+
+                    <div class="col-md-12 mb-3">
+                      <div class="input-search">
+                        <input type="text" name="place-event" id="place-event"
+                          placeholder="Cities, Regions, Zip, Country ...">
+                      </div>
+                    </div>
+                    <div class="col-lg-12 col-md-4 col-sm-6 mb-3">
+                      <select class="hero__form-input  form-control custom-select">
+                        <option>Property Type</option>
+                        <option>Apartment</option>
+                        <option>Apartment & House</option>
+                        <option>Office</option>
+                      </select>
+                    </div>
+
+                    <div class="col-lg-6 col-md-4 col-sm-6 mb-3">
+                      <input type="number" name="" id="" placeholder="Rooms From" style="padding-left:15px;">
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-6 mb-3">
+                      <input type="number" name="" id="" placeholder="Rooms To" style="padding-left:15px;">
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-6 mb-3">
+                      <input type="number" name="" id="" placeholder="Price From" style="padding-left:15px;">
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-6 mb-3">
+                      <input type="number" name="" id="" placeholder="Price To" style="padding-left:15px;">
+                    </div>
+
+                    <div class="col-sm-12">
+                      <div class="search_btn">
+                        <a href="matching-list.html">Search</a>
+                      </div>
+                    </div>
+                  </div>
+              </form>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--Hero section ends-->
+<!--Hero section ends-->
+<!--Rent page Section starts-->
+<div *ngIf="searchMode" class="rent-quick-section">
+  <div class="container">
+    <div class="page-heading">
+      <h4>{{searchMode === 'rent' ? 'Rent': 'Buy'}} Real Estate</h4>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 col-lg-12">
+        <div class="promo-content-link">
+          <div class="link">
+            <a href=""> Apartment & house <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+          <!--link-->
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-12">
+        <div class="promo-content-link">
+          <div class="link">
+            <a href=""> Apartment <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+          <!--link-->
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-12">
+        <div class="promo-content-link">
+          <div class="link">
+            <a href=""> House, chalet, rustico <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+          <!--link-->
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-12">
+        <div class="promo-content-link">
+          <div class="link">
+            <a href=""> Furnished dwelling <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+          <!--link-->
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-12">
+        <div class="promo-content-link">
+          <div class="link">
+            <a href=""> Parking space, garage <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+          <!--link-->
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-12">
+        <div class="promo-content-link">
+          <div class="link">
+            <a href=""> Office <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+          <!--link-->
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<!--Rent page Section ends-->
+<!--Promo Section starts-->
+<div *ngIf="searchMode" class="promo-section rent-page-promo home-promo mt-50 v2">
+  <div class="container">
+    <div class="row">
+      <div class="promo-content-wrap">
+        <div class="row">
+
+          <div class="col-xl-12 col-lg-12">
+            <app-promo></app-promo>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Promo Section ends-->
+<div *ngIf="!searchMode">
+<div class="promo-section home-promo mt-50 v2">
+  <div class="container">
+    <div class="row">
+
+      <div class="promo-content-wrap">
+        <div class="row">
+          <div class="col-xl-6 col-lg-12">
+            <app-advertisement></app-advertisement>
+          </div>
+
+          <div class="col-xl-6 col-lg-12">
+            <app-promo></app-promo>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<app-categories></app-categories>
+</div>

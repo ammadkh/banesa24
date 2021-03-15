@@ -1,0 +1,201 @@
+<div class="page-wrapper home-page">
+  <header class="header transparent scroll-hide">
+    <!--header-top-section-->
+    <div class="header-top-section">
+      <div class="container">
+        <div class="row ">
+
+          <div class="col-sm-12 col-12 ">
+            <div class="top-header-right-content">
+              <div class="menu-btn">
+                <ul class="user-btn">
+                  <li><a href="favourites.html"><i class="lnr lnr-heart"></i>Favourites</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="language-changer">
+                <select class="hero__form-input  form-control custom-select">
+                  <option>EN</option>
+                  <option>DE</option>
+                  <option>FR</option>
+                  <option>IT</option>
+                </select>
+              </div>
+            </div>
+            <!--top-header-right-content-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--header-top-section-->
+
+    <!--Main Menu starts-->
+    <div class="site-navbar-wrap v2">
+      <div class="container">
+        <div class="site-navbar">
+          <div class="row align-items-center">
+            <div class="col-lg-2 col-md-6 col-7 main-logo">
+              <a class="navbar-brand" href="index.html"><img src="assets/images/logo-blue.png" alt="logo"
+                  class="img-fluid"></a>
+            </div>
+            <div class="col-lg-6 col-md-1 col-1  mian-menu order-2 order-lg-1 pl-xs-0">
+              <nav class="site-navigation text-right">
+                <div class="container">
+                  <ul class="site-menu js-clone-nav d-none d-lg-block">
+                    <li class="has-children">
+                      <a routerLink="/search" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">Home</a>
+                    </li>
+                    <li class="has-children">
+                      <a routerLink="/search/rent" routerLinkActive="active">Rent</a>
+                    </li>
+
+                    <li class="has-children">
+                      <a routerLink="/search/buy" routerLinkActive="active">Buy</a>
+                    </li>
+                    <li class="has-children">
+                      <a routerLink="/about" routerLinkActive="active">About</a>
+                    </li>
+                    <li class="has-children">
+                      <a routerLink="/contact" routerLinkActive="active">Contact us</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <div class="d-lg-none sm-right">
+                <a href="#" class="mobile-bar js-menu-toggle">
+                  <span class="lnr lnr-menu"></span>
+                </a>
+              </div>
+              <!--mobile-menu starts -->
+              <div class="site-mobile-menu">
+                <div class="site-mobile-menu-header">
+                  <div class="site-mobile-menu-close  js-menu-toggle">
+                    <span class="lnr lnr-cross"></span> </div>
+                </div>
+                <div class="site-mobile-menu-body"></div>
+              </div>
+              <!--mobile-menu ends-->
+            </div>
+            <div class="col-lg-4 col-md-5 col-4 order-1 order-lg-2 text-right pr-xs-0">
+              <div class="menu-btn">
+                <div class="add-list">
+                  <a class="btn v1" (click)="loginMenuOpen()"><i class="lnr lnr-user"></i>
+                    <span> {{user ? user.username : 'User Account'}}</span>&nbsp; <span *ngIf="user" class="caret"></span></a>
+                    <ul *ngIf="user && isMenuOpen" id="loginDropdown" class="login-dropdown-content" [ngClass]="{'loginDropdownshow': isMenuOpen }">
+                      <li><a routerLink="./profile" (click)="loginMenuOpen()">Profile</a></li>
+                      <li class="active" (click)="loginMenuOpen()"><a routerLink="./create-ad">Create Ad </a></li>
+                      <li (click)="loginMenuOpen()"> <a routerLink="./myads">My Ads</a></li>
+                      <li (click)="loginMenuOpen()"> <a routerLink="watch-list">Watchlist</a></li>
+                      <li (click)="loginMenuOpen()"> <a href="/" (click)="onLogout()">Logout</a></li>
+                      </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Main Menu ends-->
+  </header>
+  <!--Header ends-->
+  <span class="scrolltotop"><i class="lnr lnr-arrow-up"></i></span>
+  <!-- Scroll to top ends-->
+</div>
+<br><br><br><br><br>
+<router-outlet></router-outlet>
+<br>
+<!-- Scroll to top starts-->
+<!--Footer Starts-->
+<div class="footer-wrapper v1">
+  <div class="footer-top-area">
+    <div class="container">
+      <div class="row nav-folderized">
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-logo">
+            <a href="index.html"> <img src="assets/images/logo-footer.png" alt="logo"></a>
+            <div class="company-desc">
+
+              <ul class="list footer-list mt-20">
+                <li>
+                  <div class="contact-info">
+                    <div class="icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="text">TX Markets Ltd Werdstrasse 21 8004 Zürich</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-info">
+                    <div class="icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="text"><a href="#">info@banesa24.com</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-info">
+                    <div class="icon">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="text">0821 123 145</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 text-center sm-left">
+          <div class="footer-content nav">
+            <h2 class="title">Real Estate</h2>
+            <ul class="list res-list">
+              <li><a class="link-hov style2" href="rent.html">Rent</a></li>
+              <li><a class="link-hov style2" href="buy.html">Buy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 text-center sm-left">
+          <div class="footer-content nav">
+            <h2 class="title">Quick Links</h2>
+            <ul class="list res-list">
+              <li><a class="link-hov style2" href="about.html">About us</a></li>
+              <li><a class="link-hov style2" href="contact.html">Contact us</a></li>
+              <li><a class="link-hov style2" href="terms_conditions.html">Terms & Conditions </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12">
+          <div class="footer-content">
+            <h4 class="title">Follow Us</h4>
+
+            <div class="footer-social-wrap">
+
+              <ul class="social-buttons style2">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 copy-write">
+          <p>
+            ©Banesa24 2021. All rights reserved. </p>
+        </div>
+        <div class="col-md-6 newsletter-link">
+          <a href="newsletter.html"><i class="fa fa-envelope"></i> Subscribe to our newsletter
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Footer ends-->
